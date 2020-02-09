@@ -1,5 +1,3 @@
 <div class="pokemon-list">
-  <app-pokemon-card pokemonName="Pikachu" pokemonType="ELECTRIC" pokemonImage="25"></app-pokemon-card>
-  <app-pokemon-card pokemonName="Bulbasaur" pokemonType="GRASS" pokemonImage="1"></app-pokemon-card>
-  <app-pokemon-card pokemonName="Charmander" pokemonType="FIRE" pokemonImage="4"></app-pokemon-card>
+  <app-pokemon-card *ngFor="let pokemon of pokemons" [pokemon]="pokemon"></app-pokemon-card>
 </div>

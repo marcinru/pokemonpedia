@@ -1,9 +1,9 @@
 <mat-card class="pokemon-card">
   <mat-card-header>
-    <mat-card-title class="pokemon-font pokemon-name">{{pokemonName}}</mat-card-title>
+    <mat-card-title class="pokemon-font pokemon-name">{{pokemon.name}}</mat-card-title>
   </mat-card-header>
-  <img mat-card-image [src]="'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' + pokemonImage + '.png'">
+  <img mat-card-image [src]="pokemon.imageUrl">
   <mat-card-footer class="pokemon-font pokemon-type electric">
-    {{pokemonType}}
+    {{pokemon.type}}
   </mat-card-footer>
 </mat-card>
