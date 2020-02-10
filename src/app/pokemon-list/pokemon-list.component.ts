@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Pokemon } from '../pokemon-card/pokemon.model';
+import { PokemonCard } from '../pokemon-card/pokemon-card.model';
 
 @Component({
   selector: 'app-pokemon-list',
@@ -7,7 +7,7 @@ import { Pokemon } from '../pokemon-card/pokemon.model';
   styleUrls: ['./pokemon-list.component.css']
 })
 export class PokemonListComponent implements OnInit {
-  pokemons: Pokemon[];
+  pokemons: PokemonCard[];
 
   constructor() { }
 
@@ -15,18 +15,15 @@ export class PokemonListComponent implements OnInit {
     this.pokemons = [
       {
         name: 'Pikachu',
-        type: 'electric',
-        imageUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png'
+        url: 'https://pokeapi.co/api/v2/pokemon/25/'
       },
       {
         name: 'Bulbasaur',
-        type: 'grass',
-        imageUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png'
+        url: 'https://pokeapi.co/api/v2/pokemon/1/'
       },
       {
         name: 'Charmander',
-        type: 'fire',
-        imageUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png'
+        url: 'https://pokeapi.co/api/v2/pokemon/4/'
       }
     ];
   }
