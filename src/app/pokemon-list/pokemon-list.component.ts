@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PokemonCard } from '../pokemon-card/pokemon-card.model';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-pokemon-list',
@@ -9,23 +10,14 @@ import { PokemonCard } from '../pokemon-card/pokemon-card.model';
 export class PokemonListComponent implements OnInit {
   pokemons: PokemonCard[];
 
-  constructor() { }
+  constructor(private httpClient: HttpClient) { }
 
   ngOnInit() {
-    this.pokemons = [
-      {
-        name: 'Pikachu',
-        url: 'https://pokeapi.co/api/v2/pokemon/25/'
-      },
-      {
-        name: 'Bulbasaur',
-        url: 'https://pokeapi.co/api/v2/pokemon/1/'
-      },
-      {
-        name: 'Charmander',
-        url: 'https://pokeapi.co/api/v2/pokemon/4/'
-      }
-    ];
+    this.httpClient
+      .get<any>('https://pokeapi.co/api/v2/pokemon')
+      .subscribe(response => {
+        this.pokemons = response.results;
+      });
   }
 
 }
