@@ -9,12 +9,22 @@ import { HttpClient } from '@angular/common/http';
 })
 export class PokemonListComponent implements OnInit {
   pokemons: PokemonCard[];
+  pokemonsCount: number;
 
   constructor(private httpClient: HttpClient) { }
 
   ngOnInit() {
     this.httpClient
       .get<any>('https://pokeapi.co/api/v2/pokemon')
+      .subscribe(response => {
+        this.pokemons = response.results;
+        this.pokemonsCount = response.count;
+      });
+  }
+
+  goToPage(page) {
+    this.httpClient
+      .get<any>("https://pokeapi.co/api/v2/pokemon?offset=" + page.pageIndex * 20 + "&limit=20")
       .subscribe(response => {
         this.pokemons = response.results;
       });

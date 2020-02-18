@@ -7,6 +7,10 @@
   justify-content: center;
 }
 
+.pokemon-card mat-card-title {
+  margin: 0 -16px;
+}
+
 .pokemon-name {
   font-size: 1em;
   text-transform: capitalize;
