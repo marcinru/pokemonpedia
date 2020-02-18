@@ -8,6 +8,7 @@ import { MatToolbarModule, MatCardModule } from '@angular/material';
 import { PokemonListComponent } from './pokemon-list/pokemon-list.component';
 import { PokemonCardComponent } from './pokemon-card/pokemon-card.component';
 import { HttpClientModule } from '@angular/common/http';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     MatToolbarModule,
     MatCardModule,
-    HttpClientModule
+    HttpClientModule,
+    MatPaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent]
