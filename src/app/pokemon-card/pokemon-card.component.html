@@ -3,7 +3,7 @@
     <mat-card-title class="pokemon-font pokemon-name">{{pokemon.name}}</mat-card-title>
   </mat-card-header>
   <img mat-card-image [src]="pokemon.imageUrl">
-  <mat-card-footer class="pokemon-font pokemon-type electric">
+  <mat-card-footer class="pokemon-font pokemon-type" [ngClass]="pokemon.type">
     {{pokemon.type}}
   </mat-card-footer>
 </mat-card>

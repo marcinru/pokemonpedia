@@ -24,14 +24,50 @@
   text-transform: uppercase;
 }
 
+.bug {
+  background-color: #a6b91a;
+}
+
 .electric {
   background-color: #f8d030;
+}
+
+.fighting {
+  background-color: #c22e28;
+}
+
+.fire {
+  background-color: #f08030;
+}
+
+.flying {
+  background-color: #a98ff3;
 }
 
 .grass {
   background-color: #78c850;
 }
 
-.fire {
-  background-color: #f08030;
+.ground {
+  background-color: #e2bf65;
+}
+
+.ice {
+  background-color: #96d9d6;
+}
+
+.normal {
+  background-color: #a8a77a;
+}
+
+.poison {
+  background-color: #a33ea1;
+}
+
+.psychic {
+  background-color: #f95587;
+}
+
+.water {
+  background-color: #6390f0;
 }
