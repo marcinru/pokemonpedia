@@ -28,8 +28,20 @@
   background-color: #a6b91a;
 }
 
+.dark {
+  background-color: #705746;
+}
+
+.dragon {
+  background-color: #6f35fc;
+}
+
 .electric {
   background-color: #f8d030;
+}
+
+.fairy {
+  background-color: #d685ad;
 }
 
 .fighting {
@@ -42,6 +54,10 @@
 
 .flying {
   background-color: #a98ff3;
+}
+
+.ghost {
+  background-color: #735797;
 }
 
 .grass {
@@ -66,6 +82,14 @@
 
 .psychic {
   background-color: #f95587;
+}
+
+.rock {
+  background-color: #b6a136;
+}
+
+.steel {
+  background-color: #b7b7ce;
 }
 
 .water {
